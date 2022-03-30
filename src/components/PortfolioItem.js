@@ -21,13 +21,13 @@ const PortfolioItem = ({
         <p>{description}</p>
         <div className="icons">
           <div className="icon">
-            <a href={deployedLink} target="_blank">
+            <a href={deployedLink} target="_blank" rel="noreferrer">
               <i className="fas fa-wifi"></i>
               <span>Deployed</span>
             </a>
           </div>
           <div className="icon">
-            <a href={githubLink} target="_blank">
+            <a href={githubLink} target="_blank" rel="noreferrer">
               <i className="fas fa-code"></i>
               <br></br>
               <span>Github</span>
@@ -48,7 +48,7 @@ const PortfolioItemStyles = styled.div`
 
   .item-front {
     text-align: center;
-    background-color: rgba(46, 139, 87, 0.8);
+    background-color: var(--portfolio-item-bg);
     padding: 0 10px;
     border-radius: 15px;
     transition: all 0.4s ease-in-out;
@@ -75,7 +75,7 @@ const PortfolioItemStyles = styled.div`
   .item-back {
     width: 100%;
     height: 100%;
-    background-color: rgba(46, 139, 87, 0.8);
+    background-color: var(--portfolio-item-bg);
     position: absolute;
     left: 0;
     top: 0;
@@ -110,7 +110,12 @@ const PortfolioItemStyles = styled.div`
         transition: all 0.4s ease-in-out;
         span {
           font-size: x-small;
+          color: var(--color-white);
         }
+
+        i {
+            color: var(--color-white);
+          }
 
         &:hover {
           background-color: var(--color-white);

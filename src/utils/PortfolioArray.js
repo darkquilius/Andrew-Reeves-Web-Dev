@@ -12,7 +12,7 @@ export const PortfolioArray = [
         picture: "GithubUserLookup",
         pictureAlt: "Github User Lookup SPA Project",
         description: "By using the github API, this project easily shows the stats of some of your favorite githubs. Auth0 is used to ensure secure log in, a Global Context keeps the data reachable across the app, and Fusion-Charts is used to graphically display the stats.",
-        deployedLink: "https://corpoate-keeper.herokuapp.com/",
+        deployedLink: "https://github-user-lookup-spa.netlify.app/",
         githubLink: "https://github.com/darkquilius/Github-User-Lookup-SPA"
     },
     {

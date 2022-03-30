@@ -29,7 +29,7 @@ const Header = () => {
             working with React. Take a look at my portfolio!
           </p>
           <div className="btn-container">
-            <a href="" className="main-btn">
+            <a href="" rel="noreferrer" className="main-btn">
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
@@ -46,7 +46,6 @@ const HeaderStyles = styled.header`
   height: 100vh;
   color: var(--color-white);
   width: fit-content;
-  /* overflow: hidden; */
 
   img {
     width: 280px;
@@ -73,7 +72,7 @@ const HeaderStyles = styled.header`
   }
 
   .header-content {
-    background-color: rgba(25, 28, 42, .5);
+    background-color: var(--container-shading);
     padding: 20px 10px;
     border-radius: 10px;
     display: grid;
@@ -134,7 +133,7 @@ const HeaderStyles = styled.header`
   .main-btn{
       border-radius: 30px;
       color: inherit;
-      background-color: #0b562a;
+      background-color: var(--cv-button);
       font-weight: 600;
       position: relative;
       border: 1px solid var(--color-white);

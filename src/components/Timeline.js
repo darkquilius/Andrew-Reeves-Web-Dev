@@ -6,16 +6,16 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-const Timeline = () => {
+const Timeline = ({timelineToggle}) => {
   return (
     <VerticleTimelineStyles className="section sec3 timeline" id="timeline">
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(50, 205, 50)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(50, 205, 50)" }}
+          contentStyle={timelineToggle? {background: "rgb(244, 37, 174)", color: "#fff" } : {background: "rgb(50, 205, 50)", color: "#fff" } }
+          contentArrowStyle={timelineToggle? {borderRight: "7px solid  rgb(244, 37, 174)"}: { borderRight: "7px solid  rgb(50, 205, 50)" }}
           date="Mar 2021 - present"
-          iconStyle={{ background: "rgb(50, 205, 50)", color: "#fff" }}
+          iconStyle={timelineToggle? {background: "rgb(244, 37, 174)", color: "#fff" } : {background: "rgb(50, 205, 50)", color: "#fff" } }
         >
           <h3 className="vertical-timeline-element-title">Software Development Engineer</h3>
           <br></br>
@@ -32,10 +32,10 @@ const Timeline = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "#5bd75b", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #5bd75b" }}
+          contentStyle={timelineToggle? { background: "#A428A4", color: "#fff" } : { background: "#5bd75b", color: "#fff" }}
+          contentArrowStyle={timelineToggle? { borderRight: "7px solid  #A428A4" }: { borderRight: "7px solid  #5bd75b" }}
           date="Feb 2021 - Mar 2021"
-          iconStyle={{ background: "#5bd75b", color: "#fff" }}
+          iconStyle={timelineToggle? { background: "#A428A4", color: "#fff" } : { background: "#5bd75b", color: "#fff" }}
         >
           <h3 className="vertical-timeline-element-title">
             Frontend Developer Intern
@@ -53,10 +53,10 @@ const Timeline = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element"
-          contentStyle={{ background: "#0BDA51", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #0BDA51" }}
+          contentStyle={timelineToggle? { background: "#F425AE", color: "#fff" } : { background: "#0BDA51", color: "#fff" }}
+          contentArrowStyle={timelineToggle? { borderRight: "7px solid  #F425AE" } : { borderRight: "7px solid  #0BDA51" }}
           date="Mar 2020"
-          iconStyle={{ background: "#0BDA51", color: "#fff" }}
+          iconStyle={timelineToggle? { background: "#F425AE", color: "#fff" } : { background: "#0BDA51", color: "#fff" }}
         >
           <h3 className="vertical-timeline-element-title">
             Wrote my very first program
@@ -70,10 +70,10 @@ const Timeline = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element"
-          contentStyle={{ background: "#2db92d", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #2db92d" }}
+          contentStyle={timelineToggle? { background: "#D246D2", color: "#fff" } :{ background: "#2db92d", color: "#fff" }}
+          contentArrowStyle={timelineToggle? { borderRight: "7px solid  #D246D2" } : { borderRight: "7px solid  #2db92d" }}
           date="Feb 2020 - Aug 2020"
-          iconStyle={{ background: "#2db92d", color: "#fff" }}
+          iconStyle={timelineToggle? { background: "#D246D2", color: "#fff" } :{ background: "#2db92d", color: "#fff" }}
         >
           <h3 className="vertical-timeline-element-title">
             Georgia Tech Full Stack Web Development Program

@@ -18,6 +18,26 @@
   --color-grey6: #12181b;
   --br-sm-2: 14px;
   --box-shadow1: 0 3px 15px rgba(0, 0, 0, .2);
+  --container-shading: #191c2a80;
+  --cv-button: #15753d;
+  --portfolio-item-bg: rgba(46, 139, 87, 0.8);
+}
+
+.light-mode{
+  --color-primary: #E6E2D4;
+  --color-secondary: #D8519F;
+  --color-white: #000000;
+  --color-black: #FFEFFF;
+  --color-grey0: #070707;
+  --color-grey1: #241E17;
+  --color-grey2: #4D4132;
+  --color-grey3: #93867C;
+  --color-grey4: #BAB1A9;
+  --color-grey5: #D5D1CA;
+  --color-grey6: #EDE7E4;
+  --container-shading: rgba(230, 227, 213, .2);
+  --cv-button: #c5428f;
+  --portfolio-item-bg: rgba(209,116,168, 0.8);
 }
 
 body{

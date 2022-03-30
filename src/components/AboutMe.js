@@ -49,7 +49,7 @@ const AboutMe = () => {
           download my CV or just contact me. I hope to meet you soon!
         </p>
         <div className="btn-container">
-          <a href="" className="main-btn">
+          <a href="" rel="noreferrer" className="main-btn">
             <span className="btn-text">Download CV</span>
             <span className="btn-icon">
               <i className="fas fa-download"></i>
@@ -69,6 +69,7 @@ const AboutMeStyles = styled.section`
   .main-title {
     text-align: center;
     padding: 20px 0;
+
     h2 {
       position: relative;
       text-transform: uppercase;
@@ -97,7 +98,7 @@ const AboutMeStyles = styled.section`
   }
 
   .about-me-container {
-    background-color: rgba(25, 28, 42, 0.5);
+    background-color: var(--container-shading);
     padding: 20px 10px;
     border-radius: 10px;
 
@@ -120,7 +121,7 @@ const AboutMeStyles = styled.section`
       .main-btn {
         border-radius: 30px;
         color: inherit;
-        background-color: #15753d;
+        background-color: var(--cv-button);
         font-weight: 600;
         position: relative;
         border: 1px solid var(--color-white);

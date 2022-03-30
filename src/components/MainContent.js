@@ -81,7 +81,7 @@ export const MainContent = styled.div`
     width: 100%;
     min-height: 100%;
     height: auto;
-    background-color: #15753d;
+    background-color: var(--cv-button);
     position: absolute;
     right: 0;
     top: 0;
