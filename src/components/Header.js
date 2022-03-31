@@ -29,7 +29,12 @@ const Header = () => {
             working with React. Take a look at my portfolio!
           </p>
           <div className="btn-container">
-            <a href="" rel="noreferrer" className="main-btn">
+            <a
+              href={require("../pdf/AndrewReeves2022.pdf")}
+              download="AndrewReeves2022.pdf"
+              rel="noreferrer"
+              className="main-btn"
+            >
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
                 <i className="fas fa-download"></i>
@@ -144,6 +149,7 @@ const HeaderStyles = styled.header`
 
       .btn-text{
           padding: 0 2rem;
+          text-decoration: none;
           @media screen and (max-width: 1200px), screen and (max-height: 600px) {
         padding: 0 1rem;
         font-size: small;

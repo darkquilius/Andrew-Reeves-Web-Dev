@@ -33,23 +33,29 @@ const AboutMe = () => {
           projects on my portfolio page!<br></br>
           <br></br>
           In my free time, I love video games. Fun fact about me:
-          <br></br> I own every generation of{" "}
-          <i className="fas fa-gamepad"></i> Playstation{" "}
-          <i className="fas fa-gamepad"></i> that has been put on the market.
+          <br></br> I own every generation of <i className="fas fa-gamepad"></i>{" "}
+          Playstation <i className="fas fa-gamepad"></i> that has been put on
+          the market.
           <br></br>
           <br></br>I also enjoy playing <i className="fas fa-guitar"></i> guitar{" "}
           <i className="fas fa-guitar"></i> and going{" "}
           <i className="fas fa-campground"></i> camping{" "}
           <i className="fas fa-campground"></i> with my{" "}
-          <i className="fas fa-female"></i> wife <i className="fas fa-female"></i> and{" "}
-          <i className="fas fa-dog"></i> dog <i className="fas fa-dog"></i>
+          <i className="fas fa-female"></i> wife{" "}
+          <i className="fas fa-female"></i> and <i className="fas fa-dog"></i>{" "}
+          dog <i className="fas fa-dog"></i>
           <br></br>
           <br></br>
           If you would like to know more about me and my skills, feel free to
           download my CV or just contact me. I hope to meet you soon!
         </p>
         <div className="btn-container">
-          <a href="" rel="noreferrer" className="main-btn">
+          <a
+            href={require("../pdf/AndrewReeves2022.pdf")}
+            download="AndrewReeves2022.pdf"
+            rel="noreferrer"
+            className="main-btn"
+          >
             <span className="btn-text">Download CV</span>
             <span className="btn-icon">
               <i className="fas fa-download"></i>
@@ -132,6 +138,7 @@ const AboutMeStyles = styled.section`
 
         .btn-text {
           padding: 0 2rem;
+          text-decoration: none;
           @media screen and (max-width: 1200px),
             screen and (max-height: 600px) {
             padding: 0 1rem;

@@ -1,7 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import ContactEmail from "../utils/ContactEmail"
+import * as emailjs  from "@emailjs/browser";
+emailjs.init("3tdGNPLr5MQiCE9J2");
 
 const Contact = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevents default refresh by the browser
+  
+    let tempParams = {
+      from_name: name,
+      email: email,
+      subject: subject,
+      message: message
+    }
+  
+    emailjs.send(ContactEmail.SERVICE_ID, ContactEmail.TEMPLATE_ID, tempParams).then(
+      (result) => {
+        alert("Message Sent, We will get back to you shortly", result.text);
+      },
+      (error) => {
+        alert("An error occurred, Please try again", error.text);
+      }
+    );
+  };
+  
+  const handleChange = (e) => {
+    e.preventDefault();
+    let x = e.target.id;
+    if(x === "contact-name"){
+      setName(e.target.value)
+    }
+    if(x === "contact-email"){
+      setEmail(e.target.value)
+    }
+    if(x === "contact-subject"){
+      setSubject(e.target.value)
+    }
+    if(x === "contact-message"){
+      setMessage(e.target.value)
+    }
+  }
+  
+
   return (
     <ContactStyles className="section sec5 contact" id="contact">
       <div className="contact-container">
@@ -60,26 +107,34 @@ const Contact = () => {
               <div className="input-control input-name">
                 <input
                   type="text"
+                  id="contact-name"
                   required
                   placeholder=" So what is your name?"
+                  onChange={e => handleChange(e)}
                 ></input>
                 <input
                   type="text"
+                  id="contact-email"
                   required
                   placeholder=" How about your email?"
+                  onChange={e => handleChange(e)}
                 ></input>
               </div>
               <div className="input-control">
                 <input
                   type="text"
+                  id="contact-subject"
                   required
                   placeholder=" What should we talk about?"
+                  onChange={e => handleChange(e)}
                 ></input>
               </div>
               <div className="input-control">
-                <textarea name="" id="" cols="15" rows="8"></textarea>
+                <textarea onChange={e => handleChange(e)} name="" id="contact-message" cols="15" rows="8"></textarea>
               </div>
-              <div className="submit-button">
+              <div onClick={(e) => {
+                handleSubmit(e)
+              }} className="submit-button">
                 <a href="" className="main-btn">
                   <span className="btn-text">Talk Soon! </span>
                   <span className="btn-icon">
