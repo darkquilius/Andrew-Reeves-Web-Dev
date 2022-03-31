@@ -20,10 +20,11 @@ const Contact = () => {
       subject: subject,
       message: message
     }
-  
+
     emailjs.send(ContactEmail.SERVICE_ID, ContactEmail.TEMPLATE_ID, tempParams).then(
       (result) => {
-        alert("Message Sent, We will get back to you shortly", result.text);
+        alert("Message Sent, I will get back to you shortly", result.text);
+        resetForm()
       },
       (error) => {
         alert("An error occurred, Please try again", error.text);
@@ -47,7 +48,13 @@ const Contact = () => {
       setMessage(e.target.value)
     }
   }
-  
+
+  const resetForm = () => {
+    document.getElementById("contact-name").value = "";
+    document.getElementById("contact-email").value = "";
+    document.getElementById("contact-subject").value = "";
+    document.getElementById("contact-message").value = "";
+  }
 
   return (
     <ContactStyles className="section sec5 contact" id="contact">
