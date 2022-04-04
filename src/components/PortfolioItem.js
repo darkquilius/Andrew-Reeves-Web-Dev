@@ -10,7 +10,7 @@ const PortfolioItem = ({
   githubLink,
 }) => {
   return (
-    <PortfolioItemStyles>
+    <PortfolioItemStyles className="portfolio-item">
       <div className="item-front">
         <h2>{title}</h2>
         <div className="image">

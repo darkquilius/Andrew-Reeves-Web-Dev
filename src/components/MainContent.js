@@ -55,7 +55,7 @@ export const MainContent = styled.div`
     transform: translateY(0) scale(1);
   }
 
-  .bg-shape-wrap{
+  .bg-shape-wrap {
     position: fixed;
     top: 0;
     width: 100%;
@@ -87,5 +87,137 @@ export const MainContent = styled.div`
     top: 0;
     z-index: -2;
     clip-path: polygon(75% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+
+  @media screen and (max-width: 600px) {
+    //CONTROLS SECTION
+    .theme-btn {
+      width: 50px;
+      height: 50px;
+    }
+
+    .controls {
+      top: auto;
+      bottom: 0;
+      flex-direction: row;
+      justify-content: center;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      background-color: var(--color-grey5);
+      .control {
+        margin: 0.7rem 0.3rem;
+      }
+    }
+    //CONTROLS SECTION
+
+    // PAGE TITLE SECTION
+    .main-title {
+      h2 {
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        font-size: 3rem !important;
+        .me-span{
+          color: var(--me-span) !important;
+        }
+        .bg-text {
+          display: none;
+        }
+      }
+    }
+    // PAGE TITLE SECTION
+
+    // HEADER SECTION
+    .header-content {
+      grid-template-columns: 1fr;
+      height: fit-content;
+      padding-bottom: 4rem;
+      .name {
+        line-height: 15px;
+      }
+      .image {
+        margin-left: 0;
+      }
+    }
+
+    .right-header {
+      padding: 2rem !important;
+      padding-bottom: 2px;
+      text-align: center;
+    }
+    // HEADER SECTION
+
+    //ABOUT ME SECTION
+    .about-me-container {
+      padding-bottom: 6rem;
+    }
+    //ABOUT ME SECTION
+
+    // TIMELINE SECTION
+    .timeline {
+      padding-bottom: 4rem;
+
+      .vertical-timeline-element{
+        width: 200px;
+        line-height: 15px;
+      }
+
+      .vertical-timeline-element-title{
+        font-size: 1rem;
+      }
+
+      .vertical-timeline-element-subtitle{
+        font-size: .7rem;
+      }
+    }
+    // TIMELINE SECTION
+
+    // PORTFOLIO SECTION
+    .portfolio {
+      padding-bottom: 6rem;
+      .portfolio-item{
+        transform: translateX(-15%);
+      }
+    }
+    // PORTFOLIO SECTION
+
+    
+  }
+  @media screen and (max-width: 1350px){
+    //CONTACT SECTION
+    .contact {
+      flex-direction: column;
+      .contact-container {
+        padding-bottom: 6rem;
+      }
+      .contact-content {
+        padding-top: 1rem;
+        flex-direction: column;
+        .left-contact {
+          h4 {
+            font-size: 22px;
+          }
+          p {
+            line-height: 20px;
+            font-size: 15px;
+          }
+          span {
+            font-size: 15px;
+            word-wrap:break-word;
+            max-width:16ch;
+          }
+        }
+        .right-contact {
+          flex-direction: column;
+          margin-left: 0;
+          input,
+          input::-webkit-input-placeholder {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    //CONTACT SECTION
   }
 `;

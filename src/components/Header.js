@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <HeaderStyles className="section sec1 active" id="home">
+    <HeaderStyles className="section sec1 active header" id="home">
       <div className="header-content">
         <div className="left-header">
           <div className="image">
@@ -47,7 +47,7 @@ const Header = () => {
   );
 };
 
-const HeaderStyles = styled.header`
+const HeaderStyles = styled.div`
   height: 100vh;
   color: var(--color-white);
   width: fit-content;

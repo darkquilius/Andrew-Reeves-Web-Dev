@@ -1,3 +1,5 @@
+
+
 *{
   margin: 0;
   padding: 0;
@@ -21,6 +23,7 @@
   --container-shading: #191c2a80;
   --cv-button: #15753d;
   --portfolio-item-bg: rgba(46, 139, 87, 0.8);
+  --me-span: #d6e9ca;
 }
 
 .light-mode{
@@ -38,6 +41,7 @@
   --container-shading: rgba(230, 227, 213, .2);
   --cv-button: #c5428f;
   --portfolio-item-bg: rgba(209,116,168, 0.8);
+  --me-span: #371949;
 }
 
 body{

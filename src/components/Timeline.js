@@ -11,7 +11,7 @@ const Timeline = ({timelineToggle}) => {
     <VerticleTimelineStyles className="section sec3 timeline" id="timeline">
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element"
           contentStyle={timelineToggle? {background: "rgb(244, 37, 174)", color: "#fff" } : {background: "rgb(50, 205, 50)", color: "#fff" } }
           contentArrowStyle={timelineToggle? {borderRight: "7px solid  rgb(244, 37, 174)"}: { borderRight: "7px solid  rgb(50, 205, 50)" }}
           date="Mar 2021 - present"
@@ -31,7 +31,7 @@ const Timeline = ({timelineToggle}) => {
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element"
           contentStyle={timelineToggle? { background: "#A428A4", color: "#fff" } : { background: "#5bd75b", color: "#fff" }}
           contentArrowStyle={timelineToggle? { borderRight: "7px solid  #A428A4" }: { borderRight: "7px solid  #5bd75b" }}
           date="Feb 2021 - Mar 2021"
@@ -93,6 +93,9 @@ const Timeline = ({timelineToggle}) => {
 };
 
 const VerticleTimelineStyles = styled.section`
+
+padding-bottom: 15rem;
+
 ul{
     list-style-type: disc;
 }

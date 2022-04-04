@@ -77,7 +77,7 @@ const Contact = () => {
             <p>
               I love talking to new people. Below is my contact info and links
               to my Github/LinkedIn. Shoot me an email either directly or using
-              this handy form to my right. Thanks a million. Keep Coding.
+              this handy form. Thanks a million. Keep Coding.
             </p>
             <div className="contact-info">
               <div className="contact-item">
@@ -119,14 +119,14 @@ const Contact = () => {
                   type="text"
                   id="contact-name"
                   required
-                  placeholder=" So what is your name?"
+                  placeholder="Name?"
                   onChange={(e) => handleChange(e)}
                 ></input>
                 <input
                   type="text"
                   id="contact-email"
                   required
-                  placeholder=" How about your email?"
+                  placeholder="Email?"
                   onChange={(e) => handleChange(e)}
                 ></input>
               </div>
