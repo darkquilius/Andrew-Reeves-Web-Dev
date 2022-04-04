@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ContactEmail from "../utils/ContactEmail"
 import * as emailjs  from "@emailjs/browser";
+
 emailjs.init("3tdGNPLr5MQiCE9J2");
 
 const Contact = () => {
@@ -13,6 +14,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevents default refresh by the browser
+
+    let SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    let TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
   
     let tempParams = {
       from_name: name,
@@ -21,13 +25,15 @@ const Contact = () => {
       message: message
     }
 
-    emailjs.send(ContactEmail.SERVICE_ID, ContactEmail.TEMPLATE_ID, tempParams).then(
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, tempParams).then(
       (result) => {
-        alert("Message Sent, I will get back to you shortly", result.text);
-        resetForm()
+        // alert("Message Sent, I will get back to you shortly", result.text);
+        // resetForm()
+        console.log("it did the damm thing")
       },
       (error) => {
-        alert("An error occurred, Please try again", error.text);
+        // alert("An error occurred, Please try again", error.text);
+        console.log("nope sure didnt do the damm thing")
       }
     );
   };
